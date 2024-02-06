@@ -1,0 +1,23 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Homework2_task2 {
+
+	public static void main(String[] args) throws InterruptedException  {
+		// TODO Auto-generated method stub
+		
+		ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://iherb.com/");
+		driverChrome.manage().window().maximize();	
+		
+		driverChrome.findElement(By.className("iherb-header-account-sign-in")).click();
+		driverChrome.findElement(By.name("Username")).sendKeys("olya.gubenco@gmail.com");
+		driverChrome.findElement(By.id("Password")).sendKeys("asDF123*");
+		driverChrome.findElement(By.name("button")).click();
+		
+		
+
+
+	}
+
+}

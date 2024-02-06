@@ -1,0 +1,37 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Homework2_task1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://www.amazon.com/");
+		driverChrome.manage().window().maximize();	
+
+		//time delay to input captcha
+		Thread.sleep(15000);
+		
+		//className locator
+		//press Dismiss button for the location in the left upper corner
+		driverChrome.findElement(By.className("a-button-inner")).click();
+		
+//		if (driverChrome.findElement(By.id("a-popover-1")) != null) {
+//		driverChrome.findElement(By.className("a-button-inner")).click();
+//		} else {
+//		driverChrome.findElement(By.id("nav-hamburger-menu")).click();
+//		}
+		
+		driverChrome.findElement(By.id("nav-hamburger-menu")).click();
+		Thread.sleep(5000);
+		//click anywhere on the page
+		driverChrome.findElement(By.id("hmenu-canvas-background")).click();
+		
+		
+		//click on Today's Deals
+		driverChrome.findElement(By.linkText("Today's Deals")).click();
+
+	}
+
+}

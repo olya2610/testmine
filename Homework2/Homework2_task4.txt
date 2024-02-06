@@ -1,0 +1,32 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Homework2_task4 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://darwin.md/");
+		driverChrome.manage().window().maximize();	
+
+		
+		driverChrome.findElement(By.partialLinkText("Promo")).click();
+		
+	Thread.sleep(5000);
+		driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > div > div > div > a")).click();
+	Thread.sleep(5000);
+		driverChrome.findElement(By.partialLinkText("Accesorii")).click();
+	Thread.sleep(5000);
+		driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > div > div > div > a")).click();
+	Thread.sleep(5000);
+		driverChrome.findElement(By.partialLinkText("Experiența ta")).click();
+	Thread.sleep(5000);
+		driverChrome.findElement(By.partialLinkText("Magaz")).click();
+	Thread.sleep(5000);
+		driverChrome.findElement(By.className("menu-toggle")).click();
+	Thread.sleep(5000);
+		driverChrome.findElement(By.partialLinkText("Sport, sănătate")).click();
+	}
+
+}
