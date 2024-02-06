@@ -1,0 +1,58 @@
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class Homework1_task1 {
+	
+public static void main(String[] args) throws InterruptedException {
+	//Open the Chrome browser	
+ChromeDriver driverChrome = new ChromeDriver();
+		
+	//go to URL
+driverChrome.get("https://darwin.md/");
+    // maximize the window
+driverChrome.manage().window().maximize();
+
+//Audio
+driverChrome.findElement(By.cssSelector("#main > div > div.container > section.custom-categories.mb-0 > div > div > a:nth-child(5) > div > img")).click();
+Thread.sleep(5000);
+
+//Magazine
+driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > div > ul > li.d-none.d-lg-inline-block.mr-2")).click();
+Thread.sleep(5000);
+
+//Detalii
+driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > div > div > div > a")).click();
+Thread.sleep(5000);
+
+//Main page
+driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > header > div.logo > a > img")).click();
+Thread.sleep(5000);
+
+//Apple iPhone 11
+driverChrome.findElement(By.cssSelector("#main > div > section.recommended.populars.rec0der0.recommendeds_none > div > div.row > div.col-12.col-lg-9.popularA2.night-mode > div > div > div.swiper-slide.swiper-slide-next > figure > div.grid-item > div > a > img")).click();
+Thread.sleep(5000);
+
+//128GB
+driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-xl.d-none.d-xl-block > div > div:nth-child(2) > div > a:nth-child(2)")).click();
+Thread.sleep(5000);
+
+//White color
+driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-xl.d-none.d-xl-block > div > div.colors-wrapper.mb-8 > div > a:nth-child(4) > div")).click();
+Thread.sleep(5000);
+
+//Cumpara
+driverChrome.findElement(By.cssSelector("#main > section.presentation > div > div > div.col-12.col-md-6.col-xl-4.col-xxl-3.d-md-flex.flex-md-column > div.price-wrapper.order-md-1.w-100.rounded-8.p-16.mb-8 > div.m-0 > a")).click();
+Thread.sleep(5000);
+
+//contul meu
+driverChrome.findElement(By.cssSelector("body > div.container > div.fixed-top-header > div > header > div.mainmenu.menu_two.order-2.order-lg-1 > ul > li.user-item.d-none.d-lg-flex.align-items-center.justify-content-start.h-100")).click();
+Thread.sleep(5000);
+
+//Google auth
+driverChrome.findElement(By.cssSelector("#login-form-modal > div > div > div > div.mt-3.form-side > div.login-social > a:nth-child(1)")).click();
+
+
+
+
+}
+}
